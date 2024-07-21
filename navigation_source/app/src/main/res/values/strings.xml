@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Navigation Example</string>
+    <string name="title_private">Private</string>
+    <string name="title_deferred">Deferred</string>
+    <string name="title_stack">stack</string>
+    <string name="title_home">Home</string>
+    <string name="title_passcode">Passcode</string>
+    <string name="title_webview">Webview</string>
+    <string name="title_intent">Intent</string>
+    <string name="title_info">Info</string>
+    <string name="title_file">File</string>
+    <string name="title_db">Db</string>
+    <string name="title_deferred_default">Default deferred</string>
+    <string name="title_deferred_private">Private deferred</string>
+    <string name="buttonToFirst">go to first</string>
+    <string name="buttonToSecond">go to second</string>
+    <string name="privateTextView">This is private fragment</string>
+    <string name="homeTextView">This is home fragment</string>
+    <string name="firstTextView">Default value for first fragment</string>
+    <string name="writeToFileTextView">Write to file fragment</string>
+    <string name="saveToDbTextView">Save to db fragment</string>
+    <string name="intentWithUrlTextView">Intent with url fragment</string>
+    <string name="secondTextView">Default value for second fragment</string>
+    <string name="deferredTextView">This is deferred fragment</string>
+    <string name="defaultDeferredTextView">This is default deferred fragment</string>
+    <string name="privateDeferredTextView">This is private deferred fragment</string>
+</resources>

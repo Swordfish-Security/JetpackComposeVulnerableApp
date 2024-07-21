@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/deferredNavigation"
+    app:startDestination="@+id/navigation_deferred_default">
+
+    <fragment
+        android:id="@+id/navigation_deferred_default"
+        android:name="ru.ptsecurity.navigation_example.ui.deferred.DefaultDeferredFragment"
+        android:label="@string/title_deferred_default"
+        tools:layout="@layout/fragment_deferred_default">
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_deferred_private"
+        android:name="ru.ptsecurity.navigation_example.ui.deferred.PrivateDeferredFragment"
+        android:label="@string/title_deferred_private"
+        tools:layout="@layout/fragment_deferred_private" />
+
+</navigation>

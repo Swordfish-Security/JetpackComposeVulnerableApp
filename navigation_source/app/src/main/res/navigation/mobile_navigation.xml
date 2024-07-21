@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobileNavigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_passcode"
+        android:name="ru.ptsecurity.navigation_example.ui.passcode.PasscodeFragment"
+        android:label="@string/title_passcode"
+        tools:layout="@layout/fragment_passcode">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="ru.ptsecurity.navigation_example.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action android:id="@+id/toFirst"
+            app:destination="@+id/navigation_first">
+        </action>
+        <action android:id="@+id/toInner"
+            app:destination="@+id/innerGraph">
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_private"
+        android:name="ru.ptsecurity.navigation_example.ui.private.PrivateFragment"
+        android:label="@string/title_private"
+        tools:layout="@layout/fragment_private" />
+
+    <fragment
+        android:id="@+id/navigation_first"
+        android:name="ru.ptsecurity.navigation_example.ui.stack.FirstFragment"
+        android:label="@string/title_stack"
+        tools:layout="@layout/fragment_first">
+        <action android:id="@+id/toSecond"
+            app:destination="@+id/navigation_second">
+        </action>
+        <argument
+            android:name="textFirst"
+            app:argType="string"
+            android:defaultValue=""/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_second"
+        android:name="ru.ptsecurity.navigation_example.ui.stack.SecondFragment"
+        android:label="@string/title_stack"
+        tools:layout="@layout/fragment_second">
+        <argument
+            android:name="textSecond"
+            app:argType="string"
+            android:defaultValue=""/>
+        <action android:id="@+id/toFirst"
+            app:destination="@+id/navigation_first">
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_deferred"
+        android:name="ru.ptsecurity.navigation_example.ui.deferred.DeferredFragment"
+        android:label="@string/title_deferred"
+        tools:layout="@layout/fragment_deferred" />
+
+    <fragment
+        android:id="@+id/navigation_webview"
+        android:name="ru.ptsecurity.navigation_example.ui.webview.WebViewFragment"
+        android:label="@string/title_webview"
+        tools:layout="@layout/fragment_webview">
+        <argument
+            android:name="url"
+            app:argType="string"
+            android:defaultValue=""/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_write_to_file"
+        android:name="ru.ptsecurity.navigation_example.ui.writetofile.WriteToFileFragment"
+        android:label="@string/title_file"
+        tools:layout="@layout/fragment_write_to_file">
+        <argument
+            android:name="data"
+            app:argType="string"
+            android:defaultValue=""/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_save_to_db"
+        android:name="ru.ptsecurity.navigation_example.ui.savetodb.SaveToDbFragment"
+        android:label="@string/title_db"
+        tools:layout="@layout/fragment_save_to_db">
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue=""/>
+        <argument
+            android:name="surname"
+            app:argType="string"
+            android:defaultValue=""/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_intent_with_url"
+        android:name="ru.ptsecurity.navigation_example.ui.urlwithintent.IntentWithUrlFragment"
+        android:label="@string/title_intent"
+        tools:layout="@layout/fragment_intent_with_url">
+        <argument
+            android:name="url"
+            app:argType="string"
+            android:defaultValue=""/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_show_info"
+        android:name="ru.ptsecurity.navigation_example.ui.showinfo.ShowInfoFragment"
+        android:label="@string/title_info"
+        tools:layout="@layout/fragment_show_info">
+        <argument
+            android:name="info"
+            app:argType="string"
+            android:defaultValue=""/>
+    </fragment>
+
+    <navigation android:id="@+id/innerGraph" app:startDestination="@id/navigation_inner_home">
+        <fragment
+            android:id="@+id/navigation_inner_home"
+            android:name="ru.ptsecurity.navigation_example.ui.inner.InnerFragment"
+            android:label="fragment_inner"
+            tools:layout="@layout/fragment_inner">
+            <argument
+                android:name="info"
+                app:argType="string"
+                android:defaultValue=""/>
+        </fragment>
+    </navigation>
+</navigation>
